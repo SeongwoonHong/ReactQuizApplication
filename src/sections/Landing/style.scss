@@ -1,0 +1,30 @@
+#Landing {
+  width: 650px;
+  height: 650px;
+  background-image: url('assets/images/background.jpg');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 20px 40px 20px 40px;
+  .landing-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $white;
+  }
+  .landing-subtitle {
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 9.5rem;
+    color: $white;
+    font-weight: bold;
+  }
+  .greeting-wrapper {
+    position: absolute;
+    top: 20rem;
+    left: 4rem;
+  }
+  .share-button {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+  }
+}

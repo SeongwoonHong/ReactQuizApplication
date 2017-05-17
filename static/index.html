@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <meta name="description" content="">
+  <!--
+  Facebook metadata
+  Info: https://developers.facebook.com/docs/sharing/webmasters
+  Validator: https://developers.facebook.com/tools/debug/
+  -->
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="en_US">
+  <!--
+  Twitter metadata
+  Info: https://dev.twitter.com/cards/overview
+  Validator: https://cards-dev.twitter.com/validator
+  -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <meta charset="utf-8">
+  <base href="{{BASENAME}}">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="{{stylesheet}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ASSET_PATH}}images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ASSET_PATH}}images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ASSET_PATH}}images/favicons/favicon-16x16.png">
+<link rel="manifest" href="{{ASSET_PATH}}images/favicons/manifest.json">
+<link rel="mask-icon" href="{{ASSET_PATH}}images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="{{ASSET_PATH}}images/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="{{ASSET_PATH}}images/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="{{ASSET_PATH}}images/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+  <body>{{#is NODE_ENV "production"}}{{#if vendor}}
+  <script type="text/javascript" src="{{vendor}}"></script>{{/if}}{{/is}}
+  <script type="text/javascript" src="{{bundle}}"></script>
+  </body>
+</html>

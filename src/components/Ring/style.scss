@@ -1,0 +1,19 @@
+.ring {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgba(211, 211, 211, 0.3);
+  .ring-svg {
+    position: absolute;
+    left: -1.5rem;
+    z-index: -1;
+    svg {
+      width: 6rem;
+      height: 4rem;
+    }
+  }
+}

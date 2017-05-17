@@ -1,0 +1,45 @@
+.question-panel {
+  .question {
+    color: $white;
+  }
+  .answers {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    div {
+      width: 22.5rem;
+      height: 5rem;
+      position: relative;
+      vertical-align: middle;
+      text-align: left;
+      color: $white;
+      font-size: 1.6rem;
+      padding-left: 1rem;
+      margin: 1rem;
+      line-height: 5rem;
+      cursor: pointer;
+      span.icons {
+        position: absolute;
+        top: 0.6rem;
+        right: 2rem;
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+      .answer-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        svg {
+          path {
+            stroke: red;
+            fill: transparent;
+          }
+        }
+      }
+    }
+  }
+}

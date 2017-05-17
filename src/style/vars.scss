@@ -1,0 +1,13 @@
+/*
+ * ====================================================================
+ * vars.scss
+ * 	Used to set variables used throughout scss files
+ * ====================================================================
+ */
+$ASSET_PATH: './assets/' !default;
+$images: '#{$ASSET_PATH}images/';
+
+$minWidth: 1024px;
+$maxWidth: 1920px;
+$white: #fff;
+$black: #000;

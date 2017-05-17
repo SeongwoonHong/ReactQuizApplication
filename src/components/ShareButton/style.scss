@@ -1,0 +1,46 @@
+.share-button {
+  border-radius: 6px;
+  display: inline-flex;
+  width: 10rem;
+  height: 2.5rem;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  .text {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 60%;
+    font-size: 1.4rem;
+    color: $white;
+  }
+  .SVGInline {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    path {
+      fill: $white;
+    }
+  }
+  &.facebook {
+    svg {
+      width: 1rem;
+      height: 2rem;
+    }
+  }
+  &.twitter {
+    .text {
+      left: 60%;
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
