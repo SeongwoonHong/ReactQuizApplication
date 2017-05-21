@@ -38,6 +38,8 @@ export const addNumber = function(state = defaultState, action) {
   switch(action.type) {
     case keys.ADD_CORRECT_QUESTION_NUMBER:
       return { ...state, correctNumber: state.correctNumber + 1};
+    case keys.SET_CURRENTNUMBER:
+      return { ...state, correctNumber: 0 }
     default:
       return state;
   }
@@ -47,6 +49,8 @@ export const addCurrentNumber = function(state= defaultState, action) {
   switch(action.type) {
     case keys.ADD_CURRENT_QUESTION_NUMBER:
       return { ...state, currentNumber: state.currentNumber + 1}
+    case keys.SET_CURRENTNUMBER:
+      return { ...state, currentNumber: 0}
     default:
       return state;
   }

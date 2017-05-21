@@ -2,7 +2,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Landing from './Landing';
-import { addCorrectQuestionNumber, addCurrentQuestionNumber } from '../App/actions';
+import { addCorrectQuestionNumber, addCurrentQuestionNumber, setCurrentNumber } from '../App/actions';
 const mapStateToProps = (state) => {
   return {
     correctNumber: state.addNumber.correctNumber,
@@ -13,7 +13,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addCorrectQuestionNumber: () => dispatch(addCorrectQuestionNumber()),
-    addCurrentQuestionNumber: () => dispatch(addCurrentQuestionNumber())
+    addCurrentQuestionNumber: () => dispatch(addCurrentQuestionNumber()),
+    setCurrentNumber: () => dispatch(setCurrentNumber())
   };
 };
 

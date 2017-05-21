@@ -3,6 +3,8 @@ import animate from 'gsap-promise';
 import ContinueButton from '../ContinueButton/ContinueButton';
 import ShareButton from '../ShareButton/ShareButton';
 import Share from 'easy-share-popup';
+import TransitionGroup from 'react-transition-group-plus';
+
 class Summary extends React.Component {
   constructor(props) {
     super(props);
@@ -63,6 +65,14 @@ class Summary extends React.Component {
           ref={ el => this.twitter = el }
           onClick={ this.twitterShareHandler }
         />
+      <TransitionGroup component="div">
+        <ContinueButton
+          text="Retry"
+          onClick={ this.props.goToHome }
+          className="continue-button"
+          delay={1}
+        />
+      </TransitionGroup>
       </div>
     );
   }

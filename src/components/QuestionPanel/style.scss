@@ -6,7 +6,7 @@
     display: flex;
     width: 80%;
     flex-wrap: wrap;
-    div {
+    > div {
       width: 22.5rem;
       height: 5rem;
       position: relative;

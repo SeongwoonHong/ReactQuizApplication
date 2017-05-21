@@ -18,8 +18,14 @@ class CorrectRing extends React.Component {
   componentWillAppear = (done) => {
     this.animateIn().then(done);
   }
+  componentWillLeave = (done) => {
+    this.animateOut().then(done);
+  }
   animateIn = () => {
     return animate.to(this.ringsvg, 1, { autoAlpha: 1, y: '-5px', ease: Power4.easeOut });
+  }
+  animateOut = () => {
+    return animate.to(this.ringsvg, 1, { autoAlpha: 0, ease: Power4.easeOut});
   }
   render () {
     return (

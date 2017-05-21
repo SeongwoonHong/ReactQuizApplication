@@ -33,3 +33,8 @@ export const addCurrentQuestionNumber = function() {
     type: keys.ADD_CURRENT_QUESTION_NUMBER
   }
 }
+export const setCurrentNumber = function() {
+  return {
+    type: keys.SET_CURRENTNUMBER
+  }
+}

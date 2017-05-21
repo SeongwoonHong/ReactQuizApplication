@@ -20,8 +20,9 @@ class ContinueButton extends React.Component {
   componentWillEnter = (done) => {
     this.animateIn().then(done);
   }
-  animateIn = () => {
+  animateIn = async () => {
     const animateText = [...this.button.querySelectorAll('.animate-text')];
+    await animate.to({}, this.props.delay, {});
     return animate.all([
       animate.to(this.button, 1, { autoAlpha: 1, delay: 0.6, ease: Expo.easeOut }),
       animate.to(this.buttonBackground, 1, { width: '100%', delay: 1, ease: Expo.easeOut }),

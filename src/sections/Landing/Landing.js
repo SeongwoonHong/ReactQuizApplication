@@ -75,6 +75,11 @@ class Landing extends React.Component {
     this.setState({ currentQuestionNum: this.state.currentQuestionNum + 1 })
     this.props.addCurrentQuestionNumber();
   }
+  goToHome = () => {
+    this.setState({ currentQuestionNum: 0});
+    this.isCorrect = [];
+    this.props.setCurrentNumber();
+  }
   render() {
     return (
       <div id="Landing">
@@ -120,7 +125,7 @@ class Landing extends React.Component {
         <TransitionGroup component="div" className="summary-wrapper">
           {
             this.state.currentQuestionNum > this.questions.length
-            ? <Summary correctNumber={ this.props.correctNumber } totalQuestionNumber={ this.questions.length}/>
+            ? <Summary goToHome={ this.goToHome } correctNumber={ this.props.correctNumber } totalQuestionNumber={ this.questions.length}/>
             : undefined
           }
         </TransitionGroup>

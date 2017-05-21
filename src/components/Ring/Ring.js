@@ -45,7 +45,7 @@ class Ring extends React.Component {
       <div className="ring" style={style} ref={ el => this.component = el }>
         <TransitionGroup component="div">
           {
-            this.props.isCorrect
+            this.props.isCorrect && this.props.isProgress
             ? <CorrectRing />
             : undefined
           }
