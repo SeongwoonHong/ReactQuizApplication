@@ -1,15 +1,16 @@
 'use strict';
 import React from 'react';
 import ReactF1 from 'react-f1';
+import TransitionGroup from 'react-transition-group-plus';
+import animate from 'gsap-promise';
+import { findDOMNode } from 'react-dom';
 import states from './states';
 import transitions from './transitions';
 import Ring from '../../components/Ring/Ring';
 import Greeting from '../../components/Greeting/Greeting';
 import QuestionPanel from '../../components/QuestionPanel/QuestionPanel';
-import TransitionGroup from 'react-transition-group-plus';
-import animate from 'gsap-promise';
-import { findDOMNode } from 'react-dom';
 import Summary from '../../components/Summary/Summary';
+import Data from '../../data/data';
 
 class Landing extends React.Component {
   constructor(props) {
@@ -21,32 +22,7 @@ class Landing extends React.Component {
     this.landingAnimate = [];
     this.ringAnimate = [];
     this.isCorrect = [];
-    this.questions = [
-      { questionNum: 1, question: "Saturn is the ____ planet from the Sun.", answerList: [
-        { id: 1, text: 'Fourth', isCorrect: false, image: undefined },
-        { id: 2, text: 'Sixth', isCorrect: true, image: undefined  },
-        { id: 3, text: 'Second', isCorrect: false, image: undefined  },
-        { id: 4, text: 'Eighth', isCorrect: false, image: undefined  }
-      ]},
-      { questionNum: 2, question: "One year on Saturn is equivalent to how many years on Earth?", answerList: [
-        { id: 1, text: '12', isCorrect: false, image: undefined },
-        { id: 2, text: '6', isCorrect: false, image: undefined  },
-        { id: 3, text: '29', isCorrect: true, image: undefined  },
-        { id: 4, text: '2', isCorrect: false, image: undefined  }
-      ]},
-      { questionNum: 3, question: "What is the name of Saturn's largest moon?", answerList: [
-        { id: 1, text: 'Hercules', isCorrect: false, image: undefined },
-        { id: 2, text: 'Europa', isCorrect: false, image: undefined  },
-        { id: 3, text: 'Goliath', isCorrect: false, image: undefined  },
-        { id: 4, text: 'Zeus', isCorrect: false, image: undefined  },
-        { id: 5, text: 'Titan', isCorrect: true, image: undefined  },
-        { id: 6, text: 'Triton', isCorrect: false, image: undefined  }
-      ]},
-      { questionNum: 4, question: "Saturn is visible from Earth without a telescope.", answerList: [
-        { id: 1, text: 'True', isCorrect: true, image: undefined },
-        { id: 2, text: 'False', isCorrect: false, image: undefined  }
-      ]},
-    ]
+    this.questions = Data;
   }
   componentWillEnter(done) {
     this.animateIn().then(done);
