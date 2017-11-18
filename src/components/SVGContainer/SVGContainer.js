@@ -14,7 +14,8 @@ export default class SVGContainer extends React.Component {
 
   static defaultProps = {
     svg: '',
-    color: ''
+    color: '',
+    didAnimate: false
   };
 
   constructor(props) {
@@ -26,6 +27,9 @@ export default class SVGContainer extends React.Component {
   }
 
   componentDidMount() {
+    if (this.props.didAnimate) {
+      animate.set(this.svgContainer, {autoAlpha: 0});
+    }
     if(this.props.color && this.svgContainer) {
       this.setColor(this.props);
     }
@@ -36,7 +40,12 @@ export default class SVGContainer extends React.Component {
       this.setColor(nextProps);
     }
   }
-
+  componentWillEnter = (done) => {
+    this.animateIn().then(done);
+  }
+  animateIn = () => {
+    return animate.to(this.svgContainer, 1, { autoAlpha: 1});
+  }
   setColor = (props) => {
     if(this.svgContainer) {
       const svg = this.svgContainer.querySelector('svg');

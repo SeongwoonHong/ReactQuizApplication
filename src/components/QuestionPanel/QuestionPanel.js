@@ -101,11 +101,13 @@ class QuestionPanel extends React.Component {
                     ? <SVGContainer className="icons" svg="icon-incorrect" />
                     : undefined
                   }
-                  {
-                    this.state.selectedAnswer && this.props.correctAnswer === answer.text
-                    ? <SVGContainer className="icons" svg="icon-correct" />
-                    : undefined
-                  }
+                  <TransitionGroup>
+                    {
+                      this.state.selectedAnswer && this.props.correctAnswer === answer.text
+                      ? <SVGContainer className="icons" svg="icon-correct" didAnimate />
+                      : undefined
+                    }
+                  </TransitionGroup>
                 </div>
               );
             })
