@@ -1,9 +1,9 @@
 #
 
-quiz application with react(used Jam3's generator)
-
+quiz application with React
+```
 npm install
 npm start
-
+```
 ## Developers
 seongwoon hong
